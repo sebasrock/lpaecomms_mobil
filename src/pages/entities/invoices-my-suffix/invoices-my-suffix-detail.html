@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Invoices</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>Inv No</ion-label>
+            <div item-content>
+                <span>{{invoices.invNo}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Inv Date</ion-label>
+            <div item-content>
+                <span>{{invoices.invDate | date:'medium'}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Inv Amount</ion-label>
+            <div item-content>
+                <span>{{invoices.invAmount}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Inv Status</ion-label>
+            <div item-content>
+                <span>{{invoices.invStatus}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label>Clients</ion-label>
+            <div item-content *ngIf="invoices.clientsId">
+                <a>{{invoices.clientsId}}</a>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="open(invoices)">{{ 'EDIT_BUTTON' | translate }}</button>
+</ion-content>

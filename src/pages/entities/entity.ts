@@ -11,6 +11,10 @@ import { IonicPage, NavController } from 'ionic-angular';
 export class EntityPage {
 
   entities: Array<any> = [
+      {name: 'ClientsMySuffix', component: 'ClientsMySuffixPage'},
+      {name: 'StockMySuffix', component: 'StockMySuffixPage'},
+      {name: 'InvoicesMySuffix', component: 'InvoicesMySuffixPage'},
+      {name: 'InvoiceItemsMySuffix', component: 'InvoiceItemsMySuffixPage'},
       /* jhipster-needle-add-entity-page - JHipster will add entity pages here */
   ];
 

@@ -1,0 +1,58 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "clientID",
+            "otherEntityName": "invoices",
+            "otherEntityRelationshipName": "clients"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "clientID",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "clientFirstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "clientLastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "clientAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "clientPhone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "clientStatus",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180729215328",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "clients",
+    "pagination": "pagination",
+    "angularJSSuffix": "mySuffix"
+}

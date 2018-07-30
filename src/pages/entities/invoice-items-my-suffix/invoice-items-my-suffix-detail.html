@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Invoice Items</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>Invitem No</ion-label>
+            <div item-content>
+                <span>{{invoiceItems.invitemNo}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Invitem Qty</ion-label>
+            <div item-content>
+                <span>{{invoiceItems.invitemQty}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label>Stock</ion-label>
+            <div item-content *ngIf="invoiceItems.stockId">
+                <a>{{invoiceItems.stockId}}</a>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label>Invoices</ion-label>
+            <div item-content *ngIf="invoiceItems.invoicesId">
+                <a>{{invoiceItems.invoicesId}}</a>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="open(invoiceItems)">{{ 'EDIT_BUTTON' | translate }}</button>
+</ion-content>

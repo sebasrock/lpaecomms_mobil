@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Clients</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="open()">
+                <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<!-- todo: add elasticsearch support -->
+<ion-content padding>
+    <ion-refresher (ionRefresh)="loadAll($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-list>
+        <ion-item-sliding *ngFor="let clients of clients; trackBy: trackId" #slidingItem>
+            <button ion-item (click)="detail(clients)">
+                <p>{{clients.clientID}}</p>
+                <p>{{clients.clientFirstName}}</p>
+                <p>{{clients.clientLastName}}</p>
+                <p>{{clients.clientAddress}}</p>
+                <p>{{clients.clientPhone}}</p>
+                <p>{{clients.clientStatus}}</p>
+            </button>
+            <ion-item-options>
+                <button ion-button color="primary" (click)="open(slidingItem, clients)">
+                    {{ 'EDIT_BUTTON' | translate }}
+                </button>
+                <button ion-button color="danger" (click)="delete(clients)">
+                    {{ 'DELETE_BUTTON' | translate }}
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+    <ion-item *ngIf="!clients?.length">
+        No Clients found.
+    </ion-item>
+</ion-content>

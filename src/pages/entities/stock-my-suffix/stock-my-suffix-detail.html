@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Stock</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>Stock ID</ion-label>
+            <div item-content>
+                <span>{{stock.stockID}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Stock Name</ion-label>
+            <div item-content>
+                <span>{{stock.stockName}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Stock Desc</ion-label>
+            <div item-content>
+                <span>{{stock.stockDesc}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Stock On Hand</ion-label>
+            <div item-content>
+                <span>{{stock.stockOnHand}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Stock Price</ion-label>
+            <div item-content>
+                <span>{{stock.stockPrice}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Stock Status</ion-label>
+            <div item-content>
+                <span>{{stock.stockStatus}}</span>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="open(stock)">{{ 'EDIT_BUTTON' | translate }}</button>
+</ion-content>

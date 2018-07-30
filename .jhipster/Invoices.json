@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "clients",
+            "otherEntityName": "clients",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "invNo",
+            "otherEntityName": "invoiceItems",
+            "otherEntityRelationshipName": "invoices"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "invNo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "invDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "invAmount",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "invStatus",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180729215329",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "invoices",
+    "pagination": "pagination",
+    "javadoc": "not an ignored comment",
+    "angularJSSuffix": "mySuffix"
+}

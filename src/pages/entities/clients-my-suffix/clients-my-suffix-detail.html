@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Clients</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>Client ID</ion-label>
+            <div item-content>
+                <span>{{clients.clientID}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Client First Name</ion-label>
+            <div item-content>
+                <span>{{clients.clientFirstName}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Client Last Name</ion-label>
+            <div item-content>
+                <span>{{clients.clientLastName}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Client Address</ion-label>
+            <div item-content>
+                <span>{{clients.clientAddress}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Client Phone</ion-label>
+            <div item-content>
+                <span>{{clients.clientPhone}}</span>
+            </div>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Client Status</ion-label>
+            <div item-content>
+                <span>{{clients.clientStatus}}</span>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="open(clients)">{{ 'EDIT_BUTTON' | translate }}</button>
+</ion-content>
